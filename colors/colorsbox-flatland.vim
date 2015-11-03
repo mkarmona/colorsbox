@@ -16,7 +16,7 @@ if version > 580
   endif
 endif
 
-let g:colors_name='colorsbox-blackboard'
+let g:colors_name='colorsbox-flatland'
 
 if !has('gui_running') && &t_Co != 256
   finish
@@ -74,29 +74,33 @@ let s:is_dark=(&background == 'dark')
 let s:gb = {}
 
 " fill it with absolute colors
-let s:gb.dark0       = ['#0C1021', 235]     " 40-40-40
-let s:gb.dark1       = ['#151c3b', 237]     " 60-56-54
-let s:gb.dark2       = ['#1f2954', 239]     " 80-73-69
-let s:gb.dark3       = ['#28356e', 241]     " 102-92-84
-let s:gb.dark4       = ['#314287', 243]     " 124-111-100
-let s:gb.dark4_256   = ['#314287', 243]     " 124-111-100
+let s:gb.dark0_hard  = ['#1d272b', 234]     " 29-32-33
+let s:gb.dark0       = ['#263238', 235]     " 40-40-40
+let s:gb.dark0_soft  = ['#2f3d45', 236]     " 50-48-47
+let s:gb.dark1       = ['#37474F', 237]     " 60-56-54
+let s:gb.dark2       = ['#455a64', 239]     " 80-73-69
+let s:gb.dark3       = ['#546e7a', 241]     " 102-92-84
+let s:gb.dark4       = ['#607d8b', 243]     " 124-111-100
+let s:gb.dark4_256   = ['#607d8b', 243]     " 124-111-100
 
-let s:gb.gray_245    = ['#AEAEAE', 245]     " 146-131-116 dark
+let s:gb.gray_245    = ['#90A4AE', 245]     " 146-131-116 dark
 
-let s:gb.light0      = ['#f8f8f8', 229]     " 253-244-193
-let s:gb.light1      = ['#e0e0e0', 223]     " 235-219-178
-let s:gb.light2      = ['#c7c7c7', 250]     " 213-196-161
-let s:gb.light3      = ['#AEAEAE', 248]     " 189-174-147
-let s:gb.light4      = ['#949494', 246]     " 168-153-132
-let s:gb.light4_256  = ['#949494', 246]     " 168-153-132
+let s:gb.light0_hard = ['#fafdff', 230]     " 249-245-215 dark
+let s:gb.light0      = ['#eceff1', 229]     " 253-244-193
+let s:gb.light0_soft = ['#e1e4e6', 228]     " 242-229-188
+let s:gb.light1      = ['#cfd8dc', 223]     " 235-219-178
+let s:gb.light2      = ['#b0bec5', 250]     " 213-196-161
+let s:gb.light3      = ['#90a4ae', 248]     " 189-174-147
+let s:gb.light4      = ['#78909c', 246]     " 168-153-132
+let s:gb.light4_256  = ['#78909c', 246]     " 168-153-132
 
-let s:gb.bright_red     = ['#ff6400', 167]     " 251-73-52
-let s:gb.bright_green   = ['#61ce3c', 142]     " 184-187-38
-let s:gb.bright_yellow  = ['#d8fa3c', 214]     " 250-189-47
+let s:gb.bright_red     = ['#e57373', 167]     " 251-73-52
+let s:gb.bright_green   = ['#81c784', 142]     " 184-187-38
+let s:gb.bright_yellow  = ['#FFF176', 214]     " 250-189-47
 let s:gb.bright_blue    = ['#64b5f6', 109]     " 131-165-152
-let s:gb.bright_purple  = ['#ffc0cb', 175]     " 211-134-155
-let s:gb.bright_aqua    = ['#7fffd4', 108]     " 142-192-124
-let s:gb.bright_orange  = ['#ff8c00', 208]     " 254-128-25
+let s:gb.bright_purple  = ['#CE93D8', 175]     " 211-134-155
+let s:gb.bright_aqua    = ['#C5CAE9', 108]     " 142-192-124
+let s:gb.bright_orange  = ['#ffb74d', 208]     " 254-128-25
 
 
 " }}}
