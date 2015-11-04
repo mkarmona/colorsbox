@@ -140,6 +140,11 @@ let s:none = ['NONE', 'NONE']
 
 " determine relative colors
 let s:bg0  = s:gb.dark0
+if g:colorsbox_contrast_dark == 'soft'
+    let s:bg0  = s:gb.dark0_soft
+elseif g:colorsbox_contrast_dark == 'hard'
+    let s:bg0  = s:gb.dark0_hard
+endif
 
 let s:bg1  = s:gb.dark1
 let s:bg2  = s:gb.dark2

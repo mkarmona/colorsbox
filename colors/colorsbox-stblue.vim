@@ -74,25 +74,26 @@ let s:is_dark=(&background == 'dark')
 let s:gb = {}
 
 " fill it with absolute colors
-let s:gb.dark0_hard  = ['#002451', 234]     " 29-32-33
+let s:gb.dark0_hard  = ['#001f45', 234]     " 29-32-33
 let s:gb.dark0       = ['#002451', 235]     " 40-40-40
-let s:gb.dark0_soft  = ['#002451', 236]     " 50-48-47
-let s:gb.dark1       = ['#37474F', 237]     " 60-56-54
-let s:gb.dark2       = ['#455a64', 239]     " 80-73-69
-let s:gb.dark3       = ['#546e7a', 241]     " 102-92-84
-let s:gb.dark4       = ['#607d8b', 243]     " 124-111-100
-let s:gb.dark4_256   = ['#607d8b', 243]     " 124-111-100
+let s:gb.dark0_soft  = ['#002a5e', 236]     " 50-48-47
+let s:gb.dark1       = ['#00306b', 237]     " 60-56-54
+let s:gb.dark2       = ['#003b85', 239]     " 80-73-69
+let s:gb.dark3       = ['#00469e', 241]     " 102-92-84
+let s:gb.dark4       = ['#0052b8', 243]     " 124-111-100
+let s:gb.dark4_256   = ['#0052b8', 243]     " 124-111-100
 
-let s:gb.gray_245    = ['#7285b7', 245]     " 146-131-116 dark
+"let s:gb.gray_245    = ['#7285b7', 245]     " 146-131-116 dark
+let s:gb.gray_245    = ['#a0c1eb', 245]     " 146-131-116 dark
 
 let s:gb.light0_hard = ['#ffffff', 230]     " 249-245-215 dark
 let s:gb.light0      = ['#ffffff', 229]     " 253-244-193
 let s:gb.light0_soft = ['#ffffff', 228]     " 242-229-188
-let s:gb.light1      = ['#e6e6e6', 223]     " 235-219-178
-let s:gb.light2      = ['#cccccc', 250]     " 213-196-161
-let s:gb.light3      = ['#b3b3b3', 248]     " 189-174-147
-let s:gb.light4      = ['#999999', 246]     " 168-153-132
-let s:gb.light4_256  = ['#999999', 246]     " 168-153-132
+let s:gb.light1      = ['#cedbeb', 223]     " 235-219-178
+let s:gb.light2      = ['#b7ceeb', 250]     " 213-196-161
+let s:gb.light3      = ['#a0c1eb', 248]     " 189-174-147
+let s:gb.light4      = ['#88b4eb', 246]     " 168-153-132
+let s:gb.light4_256  = ['#88b4eb', 246]     " 168-153-132
 
 let s:gb.bright_red     = ['#ff9da4', 167]     " 251-73-52
 let s:gb.bright_green   = ['#d1f1a9', 142]     " 184-187-38
@@ -140,6 +141,11 @@ let s:none = ['NONE', 'NONE']
 
 " determine relative colors
 let s:bg0  = s:gb.dark0
+if g:colorsbox_contrast_dark == 'soft'
+    let s:bg0  = s:gb.dark0_soft
+elseif g:colorsbox_contrast_dark == 'hard'
+    let s:bg0  = s:gb.dark0_hard
+endif
 
 let s:bg1  = s:gb.dark1
 let s:bg2  = s:gb.dark2
