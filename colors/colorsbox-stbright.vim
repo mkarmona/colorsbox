@@ -16,7 +16,7 @@ if version > 580
   endif
 endif
 
-let g:colors_name='colorsbox-flatland'
+let g:colors_name='colorsbox-stblue'
 
 if !has('gui_running') && &t_Co != 256
   finish
@@ -74,33 +74,33 @@ let s:is_dark=(&background == 'dark')
 let s:gb = {}
 
 " fill it with absolute colors
-let s:gb.dark0_hard  = ['#1d272b', 234]     " 29-32-33
-let s:gb.dark0       = ['#263238', 235]     " 40-40-40
-let s:gb.dark0_soft  = ['#2f3d45', 236]     " 50-48-47
-let s:gb.dark1       = ['#37474F', 237]     " 60-56-54
-let s:gb.dark2       = ['#455a64', 239]     " 80-73-69
-let s:gb.dark3       = ['#546e7a', 241]     " 102-92-84
-let s:gb.dark4       = ['#607d8b', 243]     " 124-111-100
-let s:gb.dark4_256   = ['#607d8b', 243]     " 124-111-100
+let s:gb.dark0_hard  = ['#070708', 234]     " 29-32-33
+let s:gb.dark0       = ['#121314', 235]     " 40-40-40
+let s:gb.dark0_soft  = ['#1e1f21', 236]     " 50-48-47
+let s:gb.dark1       = ['#292c2e', 237]     " 60-56-54
+let s:gb.dark2       = ['#404447', 239]     " 80-73-69
+let s:gb.dark3       = ['#575c61', 241]     " 102-92-84
+let s:gb.dark4       = ['#6e747a', 243]     " 124-111-100
+let s:gb.dark4_256   = ['#6e747a', 243]     " 124-111-100
 
-let s:gb.gray_245    = ['#90A4AE', 245]     " 146-131-116 dark
+let s:gb.gray_245    = ['#9ea19f', 245]     " 146-131-116 dark
 
-let s:gb.light0_hard = ['#fafdff', 230]     " 249-245-215 dark
-let s:gb.light0      = ['#eceff1', 229]     " 253-244-193
-let s:gb.light0_soft = ['#e1e4e6', 228]     " 242-229-188
-let s:gb.light1      = ['#cfd8dc', 223]     " 235-219-178
-let s:gb.light2      = ['#b0bec5', 250]     " 213-196-161
-let s:gb.light3      = ['#90a4ae', 248]     " 189-174-147
-let s:gb.light4      = ['#78909c', 246]     " 168-153-132
-let s:gb.light4_256  = ['#78909c', 246]     " 168-153-132
+let s:gb.light0_hard = ['#eaedeb', 230]     " 249-245-215 dark
+let s:gb.light0      = ['#eaedeb', 229]     " 253-244-193
+let s:gb.light0_soft = ['#eaedeb', 228]     " 242-229-188
+let s:gb.light1      = ['#d1d4d2', 223]     " 235-219-178
+let s:gb.light2      = ['#b8bab8', 250]     " 213-196-161
+let s:gb.light3      = ['#9ea19f', 248]     " 189-174-147
+let s:gb.light4      = ['#858786', 246]     " 168-153-132
+let s:gb.light4_256  = ['#858786', 246]     " 168-153-132
 
-let s:gb.bright_red     = ['#e57373', 167]     " 251-73-52
-let s:gb.bright_green   = ['#81c784', 142]     " 184-187-38
-let s:gb.bright_yellow  = ['#FFF176', 214]     " 250-189-47
-let s:gb.bright_blue    = ['#64b5f6', 109]     " 131-165-152
-let s:gb.bright_purple  = ['#CE93D8', 175]     " 211-134-155
-let s:gb.bright_aqua    = ['#C5CAE9', 108]     " 142-192-124
-let s:gb.bright_orange  = ['#ffb74d', 208]     " 254-128-25
+let s:gb.bright_red     = ['#d54e53', 167]     " 251-73-52
+let s:gb.bright_green   = ['#b9ca4a', 142]     " 184-187-38
+let s:gb.bright_yellow  = ['#e7c547', 214]     " 250-189-47
+let s:gb.bright_blue    = ['#7aa6da', 109]     " 131-165-152
+let s:gb.bright_purple  = ['#c397d8', 175]     " 211-134-155
+let s:gb.bright_aqua    = ['#70c0b1', 108]     " 142-192-124
+let s:gb.bright_orange  = ['#e78c45', 208]     " 254-128-25
 
 
 " }}}
@@ -140,6 +140,11 @@ let s:none = ['NONE', 'NONE']
 
 " determine relative colors
 let s:bg0  = s:gb.dark0
+if g:colorsbox_contrast_dark == 'soft'
+    let s:bg0  = s:gb.dark0_soft
+elseif g:colorsbox_contrast_dark == 'hard'
+    let s:bg0  = s:gb.dark0_hard
+endif
 
 let s:bg1  = s:gb.dark1
 let s:bg2  = s:gb.dark2
