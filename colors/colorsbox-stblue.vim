@@ -83,7 +83,6 @@ let s:gb.dark3       = ['#00469e', 241]     " 102-92-84
 let s:gb.dark4       = ['#0052b8', 243]     " 124-111-100
 let s:gb.dark4_256   = ['#0052b8', 243]     " 124-111-100
 
-"let s:gb.gray_245    = ['#7285b7', 245]     " 146-131-116 dark
 let s:gb.gray_245    = ['#a0c1eb', 245]     " 146-131-116 dark
 
 let s:gb.light0_hard = ['#ffffff', 230]     " 249-245-215 dark
@@ -333,10 +332,14 @@ endfunction
 " memoize common hi groups
 call s:HL('colorsboxFg0', s:fg0)
 call s:HL('colorsboxFg1', s:fg1)
+call s:HL('colorsboxFg2', s:fg2)
 call s:HL('colorsboxFg3', s:fg3)
 call s:HL('colorsboxFg4', s:fg4)
 call s:HL('colorsboxGray', s:gray)
+call s:HL('colorsboxBg0', s:bg0)
+call s:HL('colorsboxBg1', s:bg1)
 call s:HL('colorsboxBg2', s:bg2)
+call s:HL('colorsboxBg3', s:bg3)
 
 call s:HL('colorsboxRed', s:red)
 call s:HL('colorsboxRedBold', s:red, s:none, s:bold)
@@ -345,9 +348,9 @@ call s:HL('colorsboxGreenBold', s:green, s:none, s:bold)
 call s:HL('colorsboxYellow', s:yellow)
 call s:HL('colorsboxYellowBold', s:yellow, s:none, s:bold)
 call s:HL('colorsboxBlue', s:blue)
-" call s:HL('colorsboxBlueBold', s:blue, s:none, s:bold)
+call s:HL('colorsboxBlueBold', s:blue, s:none, s:bold)
 call s:HL('colorsboxPurple', s:purple)
-" call s:HL('colorsboxPurpleBold', s:purple, s:none, s:bold)
+call s:HL('colorsboxPurpleBold', s:purple, s:none, s:bold)
 call s:HL('colorsboxAqua', s:aqua)
 call s:HL('colorsboxAquaBold', s:aqua, s:none, s:bold)
 call s:HL('colorsboxOrange', s:orange)

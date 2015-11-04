@@ -1,6 +1,29 @@
 " -----------------------------------------------------------------------------
 " File: colorsbox.vim
 " -----------------------------------------------------------------------------
+function! s:getGruvColor(group)
+  let guiColor = synIDattr(hlID(a:group), "fg", "gui") 
+  let termColor = synIDattr(hlID(a:group), "fg", "cterm") 
+  return [ guiColor, termColor ]
+endfunction
+
+let s:bg1  = s:getGruvColor('GruvboxBg1')
+let s:bg2  = s:getGruvColor('GruvboxBg2')
+let s:bg3  = s:getGruvColor('GruvboxBg3')
+let s:bg4  = s:getGruvColor('GruvboxBg4')
+let s:gray = s:getGruvColor('GruvboxGray')
+let s:fg1  = s:getGruvColor('GruvboxFg1')
+let s:fg2  = s:getGruvColor('GruvboxFg2')
+let s:fg3  = s:getGruvColor('GruvboxFg3')
+let s:fg4  = s:getGruvColor('GruvboxFg4')
+
+let s:red    = s:getGruvColor('GruvboxRed')
+let s:green  = s:getGruvColor('GruvboxGreen')
+let s:yellow = s:getGruvColor('GruvboxYellow')
+let s:blue   = s:getGruvColor('GruvboxBlue')
+let s:purple = s:getGruvColor('GruvboxPurple')
+let s:aqua   = s:getGruvColor('GruvboxAqua')
+let s:orange = s:getGruvColor('GruvboxOrange')
 
 let g:airline#themes#colorsbox#palette = {}
 
@@ -45,7 +68,7 @@ function! airline#themes#colorsbox#refresh()
   let g:airline#themes#colorsbox#palette.visual.airline_warning = g:airline#themes#colorsbox#palette.normal.airline_warning
   let g:airline#themes#colorsbox#palette.visual_modified.airline_warning = g:airline#themes#colorsbox#palette.normal_modified.airline_warning
 
-  let s:IA = airline#themes#get_highlight2(['TabLine', 'fg'], ['CursorLine', 'bg'])
+  let s:IA = airline#themes#get_highlight2(['Normal', 'bg'], ['StatusLineNc', 'bg'])
   let g:airline#themes#colorsbox#palette.inactive = airline#themes#generate_color_map(s:IA, s:IA, s:IA)
   let g:airline#themes#colorsbox#palette.inactive_modified = { 'airline_c': modified_group }
 
