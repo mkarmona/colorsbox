@@ -16,7 +16,7 @@ if version > 580
   endif
 endif
 
-let g:colors_name='colorsbox-stblue'
+let g:colors_name='colorsbox-stnight'
 
 if !has('gui_running') && &t_Co != 256
   finish
