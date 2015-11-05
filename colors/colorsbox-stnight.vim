@@ -138,6 +138,10 @@ let s:vim_bg = ['bg', 'bg']
 let s:vim_fg = ['fg', 'fg']
 let s:none = ['NONE', 'NONE']
 
+if !exists('g:colorsbox_contrast_dark')
+  let g:colorsbox_contrast_dark = 'medium'
+endif
+
 " determine relative colors
 let s:bg0  = s:gb.dark0
 if g:colorsbox_contrast_dark == 'soft'
